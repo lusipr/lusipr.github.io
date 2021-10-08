@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tokosnack Super Murah</title>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript">
+    	function Total(){
+    		var item = [27000, 5000, 15000, 16000, 12000];
+   			var total = 1,hasil = 0;
+    		for(let index = 0; index < item.length; index++){
+        		total = item[index] * document.getElementById("item"+(index+1)).value;
+        		hasil += total;
+    		}
+    		document.getElementById("hasil").value = "Rp "+hasil+",00";
+		}
+
+    	function awalApp(){
+    		document.getElementById("aplikasi").innerHTML = `
+    		<div class="container">
+        		<audio hidden autoplay>
+            		<source src="c.mp3" type="audio/mpeg">
+            		Browsermu tidak mendukung tag audio
+         		</audio>
+        		<span class="judul-website">
+            		<h1>APLIKASI KASIR SEDERHANA</h1>
+        		</span>
+        	<div class="content">
+            	<form action="#" method="#">
+                	<table>
+                 		<tr class="satu">
+							<th>NO</th>
+							<th>Produk</th>
+							<th>Harga Satuan</th>
+							<th>Jumlah Beli</th>
+                        </tr>
+                    	<tbody>
+                        <tr>
+                            <td>1.</td>
+                            <td mbl="Produk">Buavita<br>
+                                <div class="videos">
+									<video width="270" controls>
+										<source src="buavita.mp4" type="video/mp4">
+									</video>
+								</div>
+                            </td>
+                            <td mbl="Harga">Rp 27.000,00</td>
+                            <td mbl="Jumlah"><input type="number" id="item1"> Pcs</td>
+                        </tr>
+                        <tr>
+                            <td>2.</td>
+                            <td mbl="Produk">Chocolatos Drink<br>
+								<div class="videos">
+									<video width="270" controls>
+										<source src="chocolatos.mp4" type="video/mp4">
+									</video>
+								</div>
+							</td>
+                            <td mbl="Harga">Rp 5.000,00</td>
+                            <td mbl="Jumlah"><input type="number" id="item2"> Pcs</td>
+                        </tr>
+                        <tr>
+                            <td>3.</td>
+                            <td mbl="Produk">Kacang Garuda Rosta<br>
+								<div class="videos">
+									<video width="270" controls>
+										<source src="rosta.mp4" type="video/mp4">
+									</video>
+								</div>
+							</td>
+                            <td mbl="Harga">Rp 15.000,00</td>
+                            <td mbl="Jumlah"><input type="number" id="item3"> Pcs</td>
+                        </tr>
+                        <tr>
+                            <td>4.</td>
+                            <td mbl="Produk">Chitato<br>
+								<div class="videos">
+									<video width="270" controls>
+										<source src="Chitato.mp4" type="video/mp4">
+									</video>
+								</div>
+							</td>
+                            <td mbl="Harga">Rp 16.000,00</td>
+                            <td mbl="Jumlah"><input type="number" id="item4"> Pcs</td>
+                        </tr>
+                        <tr>
+                            <td>5.</td>
+                            <td mbl="Produk">Sprite<br>
+								<div class="videos">
+									<video width="270" controls>
+										<source src="Sprite.mp4" type="video/mp4">
+									</video>
+								</div>
+							</td>
+                            <td mbl="Harga">Rp 12.000,00</td>
+                            <td mbl="Jumlah"><input type="number" id="item5"> Pcs</td>
+                        </tr>
+                        <tr>
+                            <td colspan="4" class="btn-inp">
+                                <br><button type="button"onclick="Total();">HITUNG</button><br>
+                            Total Bayar : <input type="text" placeholder="Rp 0,00" id="hasil" disabled>
+                            <button class="button" onclick="window.print()">Cetak</button>
+                            </td>
+                        </tr>
+                    </tbody>	
+                </table>
+            </form>
+        </div>
+    </div>
+    `;
+}  
+	</script>
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <div class="wrapper">
+            <div class="logo">
+                <h1><a href=""><span>Toko</span>Snack</a></h1>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="">Deskripsi</a></li>
+                    <li><a href="">Contact</a></li>
+                    <li><a href="">Aplikasi Kasir</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Header -->
+    <!-- Hero -->
+    <div class="hero">
+        <div class="wrapper">
+            <div class="hero-text">
+                <h2>Beli Snack Hemat Hanya Disini</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat quisquam sint nisi, impedit reiciendis voluptas nobis odit. Quaerat porro, quas ipsam excepturi, atque tempora laboriosam hic cum modi recusandae numquam? </p>
+                <div id="aplikasi">
+                <a href="">Yuk Beli Sekarang</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="gambar/toko2.jpg" alt="">
+            </div>
+        </div>
+    </div>
+    <!-- End Hero -->
+    <!-- Catalog -->
+    <div class="catalog">
+        <div class="wrapper">
+            <h3>Koleksi Snack</h3>
+        </div>
+        <div class="wrapper">
+            <div class="catalog-item">
+                <img src="gambar/1.buavita.jpg" alt="">
+                <div class="desc">
+                    <div class="title">
+                        <h5>Buavita</h5>
+                    </div>
+                    <div class="price">
+                        Rp. 27.000
+                    </div>
+                </div>
+                
+            </div>
+            <div class="catalog-item">
+                <img src="gambar/2. choco drink.jpg" alt="">
+                <div class="desc">
+                    <div class="title">
+                        <h5>Chocolatos Drink</h5>
+                    </div>
+                    <div class="price">
+                        Rp. 5.000
+                    </div>
+                </div>
+                
+            </div>
+            <div class="catalog-item">
+                <img src="gambar/3. kacang rosta.jpg" alt="">
+                <div class="desc">
+                    <div class="title">
+                        <h5>Kacang Garuda Rosta</h5>
+                    </div>
+                    <div class="price">
+                        Rp. 15.000
+                    </div>
+                </div>
+                
+            </div>
+            <div class="catalog-item">
+                <img src="gambar/4.chitato.jpg" alt="">
+                <div class="desc">
+                    <div class="title">
+                        <h5>Chitato</h5>
+                    </div>
+                    <div class="price">
+                        Rp. 16.000
+                    </div>
+                </div>
+                
+            </div>
+            <div class="catalog-item">
+                <img src="gambar/5.sprite.jpg" alt="">
+                <div class="desc">
+                    <div class="title">
+                        <h5>Sprite</h5>
+                    </div>
+                    <div class="price">
+                        Rp. 12.000
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <!-- Catalog -->
+    <!-- Footer -->
+    <div class="footer">
+        <div class="wrapper">
+            <p>Made With Love by Lusi Pri Hartini. &copy; 2021. All Right Reserved</p>
+        </div>
+    </div>
+    <!-- End Footer -->
+</body>
+</html>
